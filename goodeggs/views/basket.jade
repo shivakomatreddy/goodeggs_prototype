@@ -1,0 +1,47 @@
+extends basketLayout
+
+block content
+    h1= title
+    p Author: Shiva Komatreddy
+
+    // Wrapper
+    #wrapper
+        // BASKET MENU
+        h3 Menu
+        #basketMenu
+            button#btnViewAllProducts Everything 
+            button#btnViewAllFruits Fruits
+            button#btnViewAllVegetables Vegetables 
+            button#btnViewAllMeats Meats 
+        // /BASKET MENU
+
+        // PRODUCT INFO
+        #productInfo
+            h2 Product Info
+            p
+                strong Name:
+                |   <span id='productInfoName'></span>
+                br
+                strong Type:
+                |   <span id='productInfoType'></span>
+                br
+                strong Farmer:
+                |   <span id='productInfoFarmer'></span>
+                br
+                strong Price:
+                |   <span id='productInfoPrice'></span>
+        // /PRODUCT INFO
+
+        // BASKET
+        #productBasket
+        h2 Basket List
+        #basketList
+            table
+                thead
+                    th ProductName
+                    th Remove?
+                    th Qty
+                tbody
+        // /BASKET LIST
+
+    // /WRAPPER

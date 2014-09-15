@@ -1,0 +1,47 @@
+extends userLayout
+
+block content
+    h1= title
+    p Author: Shiva Komatreddy
+
+    // Wrapper
+    #wrapper
+        // MARKET MENU
+        h3 Menu
+        #marketMenu
+            button#btnViewAllProducts Everything 
+            button#btnViewAllFruits Fruits
+            button#btnViewAllVegetables Vegetables 
+            button#btnViewAllMeats Meats 
+        // /MARKET MENU
+
+        // PRODUCT INFO
+        #productInfo
+            h2 Product Info
+            p
+                strong Name:
+                |   <span id='productInfoName'></span>
+                br
+                strong Type:
+                |   <span id='productInfoType'></span>
+                br
+                strong Farmer:
+                |   <span id='productInfoFarmer'></span>
+                br
+                strong Price:
+                |   <span id='productInfoPrice'></span>
+        // /PRODUCT INFO
+            
+        // PRODUCT LIST
+        h2 Produts List
+        #productList
+            table
+                thead
+                    th ProductName
+                    th Price
+                    th Qty
+                    th AddToCart
+                tbody
+        // /PRODUCT LIST
+
+    // /WRAPPER
