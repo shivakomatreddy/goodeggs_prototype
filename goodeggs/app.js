@@ -9,6 +9,16 @@ var bodyParser = require('body-parser');
 var mongo = require('mongoskin');
 var db = mongo.db('mongodb://localhost:27017/goodeggs',{native_parser:true});
 
+
+//Sqlite
+var fs = require('fs');
+var file = './db/central_db.db';
+var exists = fs.existsSync(file);
+var sqlite3 = require('sqlite3').verbose();
+var sqldb = new sqlite3.Database(file);
+
+
+
 var main = require('./routes/index');
 var market = require('./routes/market');
 var basket = require('./routes/basket');
